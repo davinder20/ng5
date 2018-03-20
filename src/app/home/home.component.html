@@ -1,0 +1,14 @@
+<div class="container">
+  <div>
+    You can see the content here ({{ countNum }})
+  </div>
+  <div class="col">
+    <form>
+    <input type="text" name="checkName" [(ngModel)]="goalText" />
+    <input type="submit" name="btn" [value]="btnName" (click)="addContent()" />
+  </form>
+  </div>
+  <div class="col" *ngFor="let goal of goals">
+    {{ goal }}
+  </div>
+</div>
